@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+                <a class="btn btn-secondary mt-1 mb-1" href=" {%url 'post-update' object.id%}">Update</a>
+                <a class="btn btn-danger mt-1 mb-1" href=" {%url 'post-delete' object.id%}">Delete</a>
+            </div>
+            <h2 class="article-title" >{{ object.title }}</h2>
+            <img src="{{ object.cover.url}}" alt="{{ object.title }}">
+          </div>
+        </article>
+  
+{% endblock content %}
