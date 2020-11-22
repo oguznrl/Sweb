@@ -1,0 +1,38 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div>
+    <table class="table table-bordered table-dark table-sm">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Posted</th>
+           
+          </tr>
+        </thead>
+{%for i in data%}
+        <tbody>
+          <tr>
+            <td>{{i.users}}</td>
+            <td>{{i.posted}}</td>
+            
+          </tr>
+        </tbody>
+{%endfor%}
+      </table>
+
+<style>
+
+  .table-wrapper{
+      max-width : 600px;
+      width : 100%;
+      margin : 100px auto;
+  }
+
+</style>
+
+
+
+</div>
+
+
+{% endblock content %}
